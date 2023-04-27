@@ -23,11 +23,7 @@ You can visit my [Trello board](https://trello.com/invite/b/30PksrxI/ATTI178b1b4
 
 Before beginning this app, I created three wireframes to organize my thoughts around the three most important views I planned the app to display. These views were the main page containing the events of the current date (and a carousel to see a preview of upcoming dates), the profile page for contacts, and the contact log containing a user-generated summary of important updates about each contact. You can view these wireframes below.
 
-![main-page](<img width="242" alt="main-page" src="https://user-images.githubusercontent.com/122638466/234995687-e35fe5c7-1757-4333-bfd0-4a324bd35652.png">)
-
-![contact-profile](<img width="242" alt="contact-profile" src="https://user-images.githubusercontent.com/122638466/234995078-d6789cd2-d773-4a00-905e-824d1bb0a02b.png">)
-
-![contact-log](<img width="243" alt="contact-log" src="https://user-images.githubusercontent.com/122638466/234995121-a00f9b7d-a4f3-4796-8b62-609c52b609a8.png">)
+<img width="795" alt="three-wireframes" src="https://user-images.githubusercontent.com/122638466/235001129-b06a0c5b-4777-4aac-b36b-ec6548db274b.png">
 
 ## Challenges
 
