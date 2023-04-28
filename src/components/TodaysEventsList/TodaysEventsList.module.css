@@ -1,0 +1,8 @@
+.TodaysEventsList {
+    min-height: 400px;
+    max-height: 400px;
+    min-width: 375px;
+    max-width: 375px;
+    border: 2px solid black;
+    margin-inline: auto;
+}
