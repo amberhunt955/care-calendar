@@ -4,9 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 // import pages
 import AuthPage from './pages/AuthPage/AuthPage';
 import MainPage from './pages/MainPage/MainPage';
-import AddContactPage from './pages/AddContactPage/AddContactPage';
 import ContactProfilePage from './pages/ContactProfilePage/ContactProfilePage';
-import AddEventPage from './pages/AddEventPage/AddEventPage';
+import FormPage from './pages/FormPage/FormPage';
 
 // import components
 import NavBar from './components/NavBar/NavBar';
@@ -28,11 +27,10 @@ function App() {
       <Routes>
         <Route path='/' element={ <MainPage /> } />
 
-        <Route path='/new' element={ <AddContactPage /> } />
+        <Route path='/new' element={ <FormPage /> } />
 
         <Route path='/contact' element={ <ContactProfilePage /> }/>
 
-        <Route path='/contact/new' element={ <AddEventPage /> } />
       </Routes>
       </>
      : 

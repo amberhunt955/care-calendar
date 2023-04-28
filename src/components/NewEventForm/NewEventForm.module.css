@@ -1,0 +1,12 @@
+.NewEventForm {
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 375px;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin-inline: auto;
+}
