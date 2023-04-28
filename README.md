@@ -25,6 +25,10 @@ Before beginning this app, I created three wireframes to organize my thoughts ar
 
 <img width="795" alt="three-wireframes" src="https://user-images.githubusercontent.com/122638466/235001129-b06a0c5b-4777-4aac-b36b-ec6548db274b.png">
 
+I also created an Entity-Relationship-Diagram to plan and map the flow of data:
+
+<img width="298" alt="ERD" src="https://user-images.githubusercontent.com/122638466/235015365-d665f338-da76-4c33-8721-f82ced2bf2b7.png">
+
 ## Challenges
 
 ## Future Improvements
