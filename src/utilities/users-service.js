@@ -54,7 +54,3 @@ export async function login(credentials) {
     localStorage.setItem('token', token);
     return getUser();
 }
-
-export async function checkToken() {
-    return usersApi.checkToken().then(dateStr => new Date(dateStr))
-}
