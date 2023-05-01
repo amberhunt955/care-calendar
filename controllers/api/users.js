@@ -3,11 +3,12 @@ const User = require('../../models/user');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-//* /*-- Helper Functions --*/
+//* Helper Functions
 function createJWT(user) {
     return jwt.sign({user}, process.env.SECRET, {expiresIn: '24h'});
 }
 
+//* User Functions
 async function create(req, res) {
     // console.log('[From POST handler]', req.body)
     try {
@@ -24,7 +25,6 @@ async function create(req, res) {
         res.status(400).json(error)
     }
 }
-
 
 async function login(req, res) {
     try {
@@ -43,12 +43,10 @@ async function login(req, res) {
     }
   }
 
-
 async function checkToken(req, res) {
     console.log(req.user);
     res.json(req.exp)
 }
-
 
 module.exports = {
     create,
