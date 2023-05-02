@@ -1,53 +1,75 @@
 const Contact = require("../../models/contact");
 const jwt = require("jsonwebtoken");
 
+//? HELPER FUNCTION
 function createJWT(contact) {
   return jwt.sign({ contact }, process.env.SECRET, { expiresIn: "24h" });
 }
 
-async function create(req, res) {
+//* CREATE A NEW CONTACT
+async function createContact(req, res) {
   try {
     // create a new contact
     const contact = await Contact.create(req.body);
-    console.log(contact);
-
     // create a new jwt
     const token = createJWT(contact);
     res.json(token);
   } catch (error) {
-    console.log(error);
     res.status(400).json(error);
   }
 }
 
+//* GET ALL CONTACTS FOR LOGGED IN USER
 async function getAllContacts(req, res) {
   try {
     const contacts = await Contact.find({ contact: req.user._id });
-    console.log(contacts);
     res.status(200).json(contacts);
   } catch (e) {
     res.status(400).json({ msg: e.message });
   }
 }
 
+//* FIND ONE CONTACT BY ID
+async function findContact(req, res) {
+  console.log("HELLO FROM CONTROLLER FIND CONTACT");
+  console.log(req.params.contactId);
+  try {
+    const contact = await Contact.findById(req.params.contactId).exec();
+    console.log(contact);
+    res.json(contact);
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
+}
+
+//* UPDATE DESIGNATED CONTACT
+async function updateContact(req, res) {
+    console.log("HELLO FROM UPDATE CONTACT CONTROLLER FUNCTION");
+    console.log(req);
+    try {
+      const contact = await Contact.findByIdAndUpdate(req.params.id, req.body);
+      if (!contact) {
+        return res.status(404).json({ msg: "Contact not found" });
+      }
+      res.json(contact);
+    } catch (err) {
+      console.error(err.message);
+      if (err.kind === "ObjectId") {
+        return res.status(404).json({ msg: "Contact not found" });
+      }
+      res.status(500).send("Server Error");
+    }
+  }
+
+//* DELETE DESIGNATED CONTACT
 async function deleteContact(req, res) {
-    console.log("hello from controller function");
     try {
         const contact = await Contact.findByIdAndRemove(req.params.id)
-        console.log(contact); 
         res.json(contact)   
     } catch (e) {
         res.status(400).json({msg: e.message});
     }
 }
 
-// async function findContact(req, res) {
-//   try {
-//     const contact = await Contact.findById(req.params.id);
-//     res.status(200).json(contact);
-//   } catch (e) {
-//     res.status(400).json({ msg: e.message });
-//   }
-// }
 
-module.exports = { create, getAllContacts, deleteContact };
+module.exports = { createContact, getAllContacts, findContact, updateContact, deleteContact };

@@ -12,11 +12,11 @@ function createJWT(user) {
 async function create(req, res) {
     // console.log('[From POST handler]', req.body)
     try {
-        //* creating a new user
+        // creating a new user
         const user = await User.create(req.body);
         console.log(user);
 
-        //* creating a new jwt
+        // creating a new jwt
         const token = createJWT(user);
         res.json(token);
         

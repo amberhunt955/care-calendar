@@ -13,22 +13,22 @@ function NewContactForm() {
     error: "",
   });
 
-  // Create a handle submit to attach to the form onsubmit event
-  // handle submit function needs to call the create contact from contacts api
+  // Create a handleSubmit to attach to the form onSubmit event
+  // handleSubmit needs to call createContact from contacts api
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       console.log(formData);
-      // data to be send to the backend to create a new user
+      // data to be send to the backend to create a new contact
       const contactData = {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
         address: formData.address,
       };
-      // returns a token with the user info
-      const contact = await createContact(contactData); // user service
+      // returns a token with the contact info
+      const contact = await createContact(contactData);
       console.log(contact);
     } catch (error) {
       setFormData({ ...formData, error: "Create Contact Failed - Try Again" });

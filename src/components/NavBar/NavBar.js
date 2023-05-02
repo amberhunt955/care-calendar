@@ -17,7 +17,7 @@ function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/my-contact-list">My Contacts</Link>
       &nbsp; | &nbsp;
-      <Link to="/new">Add Contact</Link>
+      <Link to="/add-new-contact">Add Contact</Link>
     </nav>
   );
 }

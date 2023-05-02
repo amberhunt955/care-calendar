@@ -10,11 +10,15 @@ export function getAllContacts() {
   return sendRequest(`${BASE_URL}/my-contact-list`);
 }
 
-export function deleteContact(id) {
-    console.log('HELLO FROM CONTACT-API');
-    return sendRequest(`${BASE_URL}/my-contact-list/${id}`, "DELETE");
-  }
+export function findContactById(contactId) {
+  return sendRequest(`${BASE_URL}/form/${contactId}`);
+}
 
-// export function getById(id) {
-//     return sendRequest(`${BASE_URL}/my-contact-list/${id}`);
-//   }
+export function updateContact(id) {
+  console.log("HELLO FROM CONTACT-API UPDATE FUNCTION");
+  return sendRequest(`${BASE_URL}/my-contact-list/${id}/edit`, "PUT");
+}
+
+export function deleteContact(id) {
+  return sendRequest(`${BASE_URL}/my-contact-list/${id}`, "DELETE");
+}

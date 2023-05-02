@@ -1,12 +1,14 @@
 //* Routing Logic
-
 const express = require('express');
 const router = express.Router();
 const eventsCtrl = require('../../controllers/api/events');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
+//* Event Routes
+// create new event 
+router.post('/', eventsCtrl.createEvent);
 
-//* POST 
-router.post('/', eventsCtrl.create);
+// find all events
+router.get('/', eventsCtrl.getAllEvents);
 
 module.exports = router;
