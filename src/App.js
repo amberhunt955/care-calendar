@@ -4,7 +4,8 @@ import { Routes, Route } from 'react-router-dom';
 // import pages
 import AuthPage from './pages/AuthPage/AuthPage';
 import MainPage from './pages/MainPage/MainPage';
-import ContactProfilePage from './pages/ContactProfilePage/ContactProfilePage';
+// import ContactProfilePage from './pages/ContactProfilePage/ContactProfilePage';
+import ContactListPage from './pages/ContactListPage/ContactListPage';
 import FormPage from './pages/FormPage/FormPage';
 
 // import components
@@ -29,7 +30,9 @@ function App() {
 
         <Route path='/new' element={ <FormPage /> } />
 
-        <Route path='/contact' element={ <ContactProfilePage /> }/>
+        <Route path='/my-contact-list' element={ <ContactListPage /> }/>
+
+        {/* <Route path={`my-contact-list/:contactId`} element={ <ContactProfilePage /> }/> */}
 
       </Routes>
       </>

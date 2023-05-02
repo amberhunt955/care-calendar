@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path'); // node module
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const methodOverride = require('method-override');
 
 const app = express();
 // development port: 3001
@@ -23,6 +24,8 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 // checks if token was sent and sets a user data on the req (req.user)
 app.use(require('./config/checkToken'));
+// for edit and delete
+// app.use(methodOverride("_method"));
 
 // * All other routes
 app.use('/api/users', require('./routes/api/users'));

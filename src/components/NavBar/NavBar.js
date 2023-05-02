@@ -13,7 +13,9 @@ function NavBar({ user, setUser }) {
       </Link>
       &nbsp;
       <span>Welcome, {user.name}</span>{" "}
-      <Link to="/">Main Page</Link>
+      <Link to="/">Home</Link>
+      &nbsp; | &nbsp;
+      <Link to="/my-contact-list">My Contacts</Link>
       &nbsp; | &nbsp;
       <Link to="/new">Add Contact</Link>
     </nav>

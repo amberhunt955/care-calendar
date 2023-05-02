@@ -23,6 +23,7 @@ function NewEventForm() {
 
       const event = await createEvent(eventData); 
       console.log(event);
+      
     } catch (error) {
       setFormData({ ...formData, error: "Create Event Failed - Try Again" });
     }
