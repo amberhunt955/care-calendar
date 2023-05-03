@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { createContact } from "../../utilities/contacts-api";
 
 import styles from "./NewContactForm.module.css";
 
 function NewContactForm() {
+  const navigate = useNavigate();
   // Create state to manage the data from the form
   const [formData, setFormData] = useState({
     name: "",
@@ -30,6 +32,7 @@ function NewContactForm() {
       // returns a token with the contact info
       const contact = await createContact(contactData);
       console.log(contact);
+      navigate('/my-contact-list')
     } catch (error) {
       setFormData({ ...formData, error: "Create Contact Failed - Try Again" });
     }
@@ -41,6 +44,7 @@ function NewContactForm() {
 
   return (
     <div>
+      <h1>Add a New Contact</h1>
       <form className={styles.NewContactForm} autoComplete="off" onSubmit={handleSubmit}>
         <label>
           Name: <input type="text" name="name" value={formData.name} onChange={handleChange} required />

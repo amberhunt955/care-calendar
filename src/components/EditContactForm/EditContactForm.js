@@ -61,6 +61,7 @@ function EditContactForm() {
 
   return (
     <div>
+      <h1>Update {contact.name}'s Information</h1>
       <form
         className={styles.EditContactForm}
         autoComplete="off"

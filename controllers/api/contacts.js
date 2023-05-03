@@ -1,4 +1,5 @@
 const Contact = require("../../models/contact");
+const Event = require("../../models/event");
 const jwt = require("jsonwebtoken");
 
 //? HELPER FUNCTION
@@ -44,32 +45,49 @@ async function findContact(req, res) {
 
 //* UPDATE DESIGNATED CONTACT
 async function updateContact(req, res) {
-    console.log("HELLO FROM UPDATE CONTACT CONTROLLER FUNCTION");
-    console.log(req);
-    try {
-      const contact = await Contact.findByIdAndUpdate(req.params.id, req.body);
-      if (!contact) {
-        return res.status(404).json({ msg: "Contact not found" });
-      }
-      res.json(contact);
-    } catch (err) {
-      console.error(err.message);
-      if (err.kind === "ObjectId") {
-        return res.status(404).json({ msg: "Contact not found" });
-      }
-      res.status(500).send("Server Error");
+  console.log("HELLO FROM UPDATE CONTACT CONTROLLER FUNCTION");
+  console.log(req);
+  try {
+    const contact = await Contact.findByIdAndUpdate(req.params.id, req.body);
+    if (!contact) {
+      return res.status(404).json({ msg: "Contact not found" });
     }
+    res.json(contact);
+  } catch (err) {
+    console.error(err.message);
+    if (err.kind === "ObjectId") {
+      return res.status(404).json({ msg: "Contact not found" });
+    }
+    res.status(500).send("Server Error");
   }
+}
 
 //* DELETE DESIGNATED CONTACT
 async function deleteContact(req, res) {
-    try {
-        const contact = await Contact.findByIdAndRemove(req.params.id)
-        res.json(contact)   
-    } catch (e) {
-        res.status(400).json({msg: e.message});
-    }
+  try {
+    const contact = await Contact.findByIdAndRemove(req.params.id);
+    res.json(contact);
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
 }
 
+//* ADD EVENT TO CONTACT
+async function addEventToContact(req, res) {
+  try {
+    const contact = await Contact.findById(req.params.contactId);
+    const event = await Event.findById(req.params.eventId);
+    contact.events.push(event)
+  } catch (e) {
+    res.status(400).json({ msg: e.message });
+  }
+}
 
-module.exports = { createContact, getAllContacts, findContact, updateContact, deleteContact };
+module.exports = {
+  createContact,
+  getAllContacts,
+  findContact,
+  updateContact,
+  deleteContact,
+  addEventToContact,
+};

@@ -43,7 +43,7 @@ function ContactListPage() {
     <div>
       <h1>My Contacts</h1>
 
-      {contacts.map((contact) => {
+      {contacts.length > 0 ? contacts.map((contact) => {
         // console.log(contact.events);
         return (
           <div key={contact._id}>
@@ -68,7 +68,7 @@ function ContactListPage() {
             </button>
           </div>
         );
-      })}
+      }) : <p>No contacts found.</p>}
     </div>
   );
 }

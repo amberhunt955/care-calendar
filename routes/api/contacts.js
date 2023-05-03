@@ -20,5 +20,8 @@ router.put('/my-contact-list/:id/edit', contactsCtrl.updateContact);
 // delete contact
 router.delete('/my-contact-list/:id', contactsCtrl.deleteContact);
 
+// add event to contact
+router.post(':contactId/add-new-event/:eventId', contactsCtrl.addEventToContact)
+
 
 module.exports = router;

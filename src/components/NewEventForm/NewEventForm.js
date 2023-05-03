@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { createEvent } from "../../utilities/events-api";
+import { addEventToContact} from "../../utilities/contacts-api";
 import styles from "./NewEventForm.module.css";
 
 function NewEventForm() {
+  const navigate = useNavigate();
+  const {contactId} = useParams()
   // Create state to manage the data from the form
   const [formData, setFormData] = useState({
     name: "",
@@ -25,7 +29,9 @@ function NewEventForm() {
       };
 
       const event = await createEvent(eventData);
+      addEventToContact(contactId, event._id)
       console.log(event);
+      navigate('/')
     } catch (error) {
       setFormData({ ...formData, error: "Create Event Failed - Try Again" });
     }
@@ -40,6 +46,8 @@ function NewEventForm() {
   };
 
   return (
+    <div>
+      <h1>Add a New Event</h1>
     <form
       className={styles.NewEventForm}
       autoComplete="off"
@@ -79,6 +87,7 @@ function NewEventForm() {
 
       <button type="submit">Add Day</button>
     </form>
+    </div>
   );
 }
 

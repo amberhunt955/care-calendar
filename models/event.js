@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// Ensure the Category model is processed by Mongoose
+require('./category');
 
-const eventSchema = new Schema({
-    name: {type: String},
-    month: {type: String},
-    day: {type: Number},
-}, {
-    timestamps: true
-})
+const eventSchema = require('./eventSchema')
 
 module.exports = mongoose.model("Event", eventSchema);

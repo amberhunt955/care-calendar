@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import EventListItem from "../EventListItem/EventListItem";
 import * as eventsAPI from "../../utilities/events-api";
 import styles from "./TodaysEventsList.module.css";
 
@@ -16,8 +15,6 @@ function TodaysEventsList() {
     }
     fetchEvents();
   }, []);
-
-  console.log(events);
 
   return (
     <div className={styles.TodaysEventsList}>
