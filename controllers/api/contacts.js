@@ -46,18 +46,16 @@ async function findContact(req, res) {
 //* UPDATE DESIGNATED CONTACT
 async function updateContact(req, res) {
   console.log("HELLO FROM UPDATE CONTACT CONTROLLER FUNCTION");
-  console.log(req);
+  console.log(req.params.id);
+  console.log(req.body);
   try {
-    const contact = await Contact.findByIdAndUpdate(req.params.id, req.body);
+    const contact = await Contact.findByIdAndUpdate(req.params.id, req.body, {new: true});
     if (!contact) {
       return res.status(404).json({ msg: "Contact not found" });
     }
     res.json(contact);
-  } catch (err) {
-    console.error(err.message);
-    if (err.kind === "ObjectId") {
-      return res.status(404).json({ msg: "Contact not found" });
-    }
+  } catch (error) {
+    console.error(error)
     res.status(500).send("Server Error");
   }
 }
