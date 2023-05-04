@@ -1,4 +1,4 @@
-<h1 align="center" id="readme-top">Per Scholas Final Project - Special Day Tracker</h1>
+<h1 align="center" id="readme-top">Friend Event Tracker</h1>
 
 <p align="center">You meet a lot of people in your lifetime, and it's not always easy to keep in touch with everyone you want to. This MERN stack app will help users maintain relationships with those for whom they might have lost touch with otherwise. When logging in, users will be provided a list of the day's birthdays and anniversaries - inspiring them to reach out to their connections.</p>
 
@@ -31,14 +31,39 @@ I also created an Entity-Relationship-Diagram to plan and map the flow of data:
 
 ## Challenges
 
+Understanding how to implement CRUD in full stack applications. Particularly, update.
+
+# What Did I Learn?
+
+After completing this app, I feel like I have a much better understanding of how routing works in the backend.
+
 ## Future Improvements
 
-## Contact
+I hope to add a lot more features in the future!
 
-Amber Hunt - Find me on [LinkedIn](https://www.linkedin.com/in/amber-hunt-90b612263/).
+These features include, but are not limited to:
+<li>Full CRUD for events dataset</li>
+<li>Creating a relationship between events and contacts</li>
+<li>Adding additional datasets, such as a conversation log for each contact</li>
+<li>Displaying data specific to the logged in user</li>
+<li>Improved styling, accessibility, and responsiveness</li>
+
+## Project Link
+
+You can view my deployed project [here](https://event-tracker.herokuapp.com/).
+
+If you have any questions, please reach out to me on [LinkedIn](https://www.linkedin.com/in/amber-hunt-90b612263/).
 
 ## Acknowledgements
 
-I used [draw.io](https://drawio-app.com/) to create my wireframes.
+I used [draw.io](https://drawio-app.com/) to create my wireframes and ERD.
+
+[Coolors.co](https://coolors.co/) is the BEST website for picking a color scheme.
+
+I had a lot of really good conversations with my classmates Mayleen and Shoshana throughout the week, which was very helpful in completing this project!
+
+Thank you also to my instructors Abraham and Colton for helping me work through some challenging errors.
+
+Finally, thank you to everyone in my cohort - you've all helped me grow so much over the past 15 weeks! It's been an honor learning with you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
