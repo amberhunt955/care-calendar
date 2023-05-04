@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as contactsAPI from "../../utilities/contacts-api";
 
-function ContactListPage() {
+import styles from "./ContactListPage.module.css"
+
+function ContactListPage({user}) {
   const navigate = useNavigate();
   const [contacts, setContacts] = useState([]);
 
@@ -40,24 +42,24 @@ function ContactListPage() {
   // };
 
   return (
-    <div>
-      <h1>My Contacts</h1>
+    <div className={styles.contactListPage}>
+      <h1>Your Contacts</h1>
 
       {contacts.length > 0 ? contacts.map((contact) => {
         // console.log(contact.events);
         return (
-          <div key={contact._id}>
-            <h2>
-              <a href={`/${contact._id}`}>{contact.name}</a>
-            </h2>
+          <div key={contact._id} className={styles.contact}>
+            <a href={`/${contact._id}`}><h2 className={styles.contactName}>{contact.name}</h2></a>
 
             <a href={`/${contact._id}/add-new-event`}>Add Event</a>
-            &nbsp; | &nbsp;
+
+            <span> | </span>
 
             <button type="submit" value= "PUT" onClick={() => navigate(`/${contact._id}/update-contact`)}>
               Edit Contact
             </button>
-            &nbsp; | &nbsp;
+
+            <span> | </span>
 
             <button
               type="submit"

@@ -1,17 +1,12 @@
-/* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
+  --tan-1: #ebd3d7;
+  --tan-2: #e7cde0;
+  --tan-3: #dec0f1;
+  --tan-4: #957fef;
+  --orange: #db5461;
+  --text-light: #efd9ce;
+  --text-dark: #7161ef;
 }
 
 body {
@@ -80,7 +75,7 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
+  background-color: var(--tan-4);
   border: .1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }

@@ -30,17 +30,12 @@ function EditContactForm() {
     }
     fetchContact(contactId);
   }, []);
-  console.log(contact);
-  console.log(formData);
 
   //* HANDLING THE NEW EDIT FORM DATA
     const handleSubmit = async (e, contact) => {
       e.preventDefault();
       try {
-        console.log(contact);
-
         const updatedContact = await contactsAPI.updateContact(contactId, contact);
-        // this is returning the original contact, not the updated contact?
         console.log(updatedContact);
         navigate('/my-contact-list');
       } catch (error) {

@@ -1,8 +1,32 @@
 .TodaysEventsList {
-    min-height: 400px;
-    max-height: 400px;
-    min-width: 375px;
-    max-width: 375px;
-    border: 2px solid black;
+    min-height: 85vh;
+    max-height: 85vh;
+    width: 95vw;
+    max-width: 800px;
     margin-inline: auto;
+    padding: 10px 20px;
+    background-color: #ffa18f;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    border-radius: 20px;
+    text-align: left;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.TodaysEventsList h1 {
+    color: #333;
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.TodaysEventsList h2 {
+    padding-bottom: 8px;
+}
+
+.TodaysEventsList li {
+    line-height: 2;
 }

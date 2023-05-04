@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { createEvent } from "../../utilities/events-api";
-import { addEventToContact} from "../../utilities/contacts-api";
 import styles from "./NewEventForm.module.css";
 
 function NewEventForm() {
@@ -12,6 +11,7 @@ function NewEventForm() {
     name: "",
     month: "",
     day: "",
+    contact: ""
   });
 
   // Create a handleSubmit to attach to the form onSubmit event
@@ -26,11 +26,12 @@ function NewEventForm() {
         name: formData.name,
         month: formData.month,
         day: formData.day,
+        contact: formData.contact
       };
 
       const event = await createEvent(eventData);
-      addEventToContact(contactId, event._id)
       console.log(event);
+      
       navigate('/')
     } catch (error) {
       setFormData({ ...formData, error: "Create Event Failed - Try Again" });
@@ -54,7 +55,18 @@ function NewEventForm() {
       onSubmit={handleSubmit}
     >
       <label>
-        Event:{" "}
+        Contact Name:{" "}
+        <input
+          type="text"
+          name="contact"
+          value={formData.contact}
+          onChange={handleChange}
+          required
+        />
+      </label>
+
+      <label>
+        Event Name:{" "}
         <input
           type="text"
           name="name"

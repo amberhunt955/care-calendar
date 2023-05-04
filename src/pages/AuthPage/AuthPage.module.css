@@ -1,0 +1,36 @@
+.AuthPage {
+    height: 95vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--tan-2);
+    border-radius: 2vmin;
+  }
+
+  .introText {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .introText h1 {
+    font-size: 40px;
+  }
+
+  .introForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .AuthPage h3 {
+    margin-top: 4vmin;
+    text-align: center;
+    color: #423b36;
+    cursor: pointer;
+  }
+
+  .AuthPage h3:hover {
+    color: #db5461;
+  }

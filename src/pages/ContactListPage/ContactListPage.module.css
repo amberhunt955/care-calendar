@@ -1,0 +1,37 @@
+.contactListPage {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.contact {
+    padding-bottom: 15px;
+}
+
+.contactListPage h1 {
+    color: #eedef8;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.contactListPage a {
+    text-decoration: none;
+    color: #ffd48f;
+}
+
+.contactListPage span {
+    color: #eedef8;
+    padding-inline: 2px;
+}
+
+.contactName {
+    color: #78d5d7;
+}
+
+.contactListPage button {
+    border: 1px solid #eedef8;
+    background-color: #7161ef;
+    color: #ffd48f;
+}

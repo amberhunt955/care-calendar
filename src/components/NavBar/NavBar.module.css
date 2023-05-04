@@ -1,0 +1,38 @@
+.NavBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    background-color: #7161ef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: #efd9ce;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.NavBar span {
+    color: #bcd979;
+}
+
+.NavBar p {
+    color: #ffd48f;
+}
+
+.NavBar a {
+    color: #efd9ce;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.NavBar a:hover {
+    color: #faf3f0;
+}
+
+.left, .right {
+    display: flex;
+    gap: 10px;
+}

@@ -46,7 +46,7 @@ function SignUpForm({setUser}) {
             <label>Email</label>
             <input type="text" name="email" value={formData.email} onChange={handleChange} required/>
             
-            <label>password</label>
+            <label>Password</label>
             <input type="password" name="password" value={formData.password} onChange={handleChange} required/>
             
             <label>Confirm</label>
