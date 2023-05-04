@@ -3,7 +3,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    padding: 10px 10px;
+    padding: 10px 10px 10px 0;
     background-color: #7161ef;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     color: #efd9ce;
@@ -14,8 +14,20 @@
     align-content: center;
 }
 
+.left, .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .NavBar span {
     color: #bcd979;
+    max-width: fit-content;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
 }
 
 .NavBar p {
@@ -30,10 +42,4 @@
 
 .NavBar a:hover {
     color: #faf3f0;
-}
-
-.left, .right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
