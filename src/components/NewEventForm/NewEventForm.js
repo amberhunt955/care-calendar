@@ -47,10 +47,9 @@ function NewEventForm() {
   };
 
   return (
-    <div>
+    <div className={styles.NewEventForm}>
       <h1>Add a New Event</h1>
     <form
-      className={styles.NewEventForm}
       autoComplete="off"
       onSubmit={handleSubmit}
     >

@@ -43,9 +43,9 @@ function NewContactForm() {
   };
 
   return (
-    <div>
+    <div className={styles.NewContactForm}>
       <h1>Add a New Contact</h1>
-      <form className={styles.NewContactForm} autoComplete="off" onSubmit={handleSubmit}>
+      <form autoComplete="off" onSubmit={handleSubmit}>
         <label>
           Name: <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </label>

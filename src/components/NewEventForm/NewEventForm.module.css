@@ -1,4 +1,4 @@
-.NewEventForm {
+.NewEventForm form {
     min-height: 200px;
     max-height: 200px;
     min-width: 375px;
@@ -7,6 +7,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    border: 2px solid #F9E1DC;
+    border-radius: 10px;
     margin-inline: auto;
+    margin-bottom: 20px;
+}
+
+.NewEventForm h1, a {
+    color: #eedef8;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+.NewEventForm label {
+    display: block;
 }

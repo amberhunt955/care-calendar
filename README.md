@@ -31,9 +31,9 @@ I also created an Entity-Relationship-Diagram to plan and map the flow of data:
 
 ## Challenges
 
-Understanding how to implement CRUD in full stack applications. Particularly, update.
+Understanding how to implement CRUD in full stack applications. Particularly, how to update data.
 
-# What Did I Learn?
+## What Did I Learn?
 
 After completing this app, I feel like I have a much better understanding of how routing works in the backend.
 

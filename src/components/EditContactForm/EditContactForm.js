@@ -48,10 +48,9 @@ function EditContactForm() {
     };
 
   return (
-    <div>
+    <div className={styles.EditContactForm}>
       <h1>Update {contact.name}'s Information</h1>
       <form
-        className={styles.EditContactForm}
         autoComplete="off"
         onSubmit={(e) => handleSubmit(e, formData)}
       >
