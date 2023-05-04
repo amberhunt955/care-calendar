@@ -10,7 +10,9 @@ function NavBar({ user, setUser }) {
   return (
     <nav className={styles.NavBar}>
       <section className={styles.left}>
-      <Link to="/">Home</Link>
+        <p>
+          <Link to="/">Home</Link>
+        </p>
 
         <span>|</span>
 
@@ -18,17 +20,17 @@ function NavBar({ user, setUser }) {
       </section>
 
       <section className={styles.right}>
-        <Link to="/my-contact-list">Contacts</Link>
+        <p><Link to="/my-contact-list">Contacts</Link></p>
 
         <span>|</span>
 
-        <Link to="/add-new-contact">Add Contact</Link>
+        <p><Link to="/add-new-contact">Add Contact</Link></p>
 
         <span>|</span>
 
-        <Link to="" onClick={handleLogOut}>
+        <p><Link to="" onClick={handleLogOut}>
           Logout
-        </Link>
+        </Link></p>
       </section>
     </nav>
   );
