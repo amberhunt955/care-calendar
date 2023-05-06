@@ -11,10 +11,15 @@ function AuthPage({ setUser }) {
   return (
     <main className={styles.AuthPage}>
       <section className={styles.introText}>
-        <h1>Friend Event Tracker</h1>
+        <h1>Care Calendar</h1>
         <p>
-          Track the birthdays, anniversaries and special occasions of people you
-          care about most.
+          Stay connected by tracking the birthdays, anniversaries and special
+          occasions of people you care about most.
+        </p>
+        <p>
+          View a list of the current day's events and be reminded to reach out.
+          Celebrate life's precious moments with ease and keep your
+          relationships strong.
         </p>
       </section>
 

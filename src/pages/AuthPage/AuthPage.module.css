@@ -7,6 +7,12 @@
     border-radius: 2vmin;
   }
 
+  @media only screen and (max-width:900px) {
+    .AuthPage {
+      flex-direction: column;
+    }
+  }
+
   .introText {
     max-width: 300px;
     display: flex;
@@ -16,6 +22,7 @@
 
   .introText h1 {
     font-size: 40px;
+    font-family: 'Lato', sans-serif;
   }
 
   .introForm {
