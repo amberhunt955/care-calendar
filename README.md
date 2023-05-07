@@ -1,4 +1,4 @@
-<h1 align="center" id="readme-top">Friend Event Tracker</h1>
+<h1 align="center" id="readme-top">Care Calendar</h1>
 
 <p align="center">You meet a lot of people in your lifetime, and it's not always easy to keep in touch with everyone you want to. This MERN stack app will help users maintain relationships with those for whom they might have lost touch with otherwise. When logging in, users will be provided a list of the day's birthdays and anniversaries - inspiring them to reach out to their connections.</p>
 
