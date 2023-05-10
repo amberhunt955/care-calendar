@@ -48,11 +48,27 @@ These features include, but are not limited to:
 <li>Displaying data specific to the logged in user</li>
 <li>Improved styling, accessibility, and responsiveness</li>
 
-## Project Link
+## Usage Guidelines
 
-You can view my deployed project [here](https://event-tracker.herokuapp.com/).
+My project was previously live on Heroku, but I took it down because they no longer have a free deployment option. I am actively searching for an alternative - if you have any suggestions, don't hesitate to reach out.
 
-If you have any questions, please reach out to me on [LinkedIn](https://www.linkedin.com/in/amber-hunt-90b612263/).
+In the meantime, to view this project you will need to clone it to your local machine and view it locally by:
+
+1 - Running the following commands in your terminal:
+
+git clone https://github.com/amberhunt955/care-calendar
+npm i
+npm run build
+
+2 - Creating a .env file in the main project directory and adding env variables ( DATABASE_URL and SECRET ) to connect to your personal database on MongoDB.
+
+3 - Run the command "nodemon server.js" to connect to MongoDB. You will be notified in the terminal when you have successfully connected.
+
+4 - In a split terminal, run the command "npm run dev" to start up the frontend and view the project in your browser. A window should open automatically. If not, visit localhost:3000.
+
+## Contact
+
+If you have any questions, please reach out to me on [LinkedIn](https://www.linkedin.com/in/amberhunt955).
 
 ## Acknowledgements
 
