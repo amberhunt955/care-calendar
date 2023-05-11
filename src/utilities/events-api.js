@@ -11,7 +11,5 @@ export function getAllEvents() {
 }
 
 export function populateContact(eventId) {
-  console.log("HELLO FROM UTILITIES");
-  console.log(eventId);
   return sendRequest(`${BASE_URL}/${eventId}`, "PUT")
 }

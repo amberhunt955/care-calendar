@@ -33,16 +33,14 @@ async function getAllEvents(req, res) {
 
 //* POPULATE CONTACT
 async function populateContact(req, res) {
-  console.log("HELLO FROM CONTROLLER EVENTS");
-  console.log(req.params.eventId);
   try {
     const event = await Event.findById(req.params.eventId).exec()
     console.log(event);
     const populatedEvent = await event.populate("contact")
     console.log(populatedEvent);
     res.json(populatedEvent)
-  } catch (err) {
-    console.log(err);
+  } catch (e) {
+    console.error(e);
     res.status(500).send("Error retrieving event");
   }
 }
