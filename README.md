@@ -56,9 +56,9 @@ In the meantime, to view this project you will need to clone it to your local ma
 
 1 - Running the following commands in your terminal:
 
-git clone https://github.com/amberhunt955/care-calendar <br/>
+<b>git clone https://github.com/amberhunt955/care-calendar <br/>
 npm i <br/>
-npm run build <br/>
+npm run build </b>
 
 2 - Creating a .env file in the main project directory and adding env variables ( DATABASE_URL and SECRET ) to connect to your personal database on MongoDB.
 
