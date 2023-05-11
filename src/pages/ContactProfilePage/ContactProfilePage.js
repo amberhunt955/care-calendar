@@ -46,7 +46,8 @@ function ContactProfilePage() {
         <a href={`/${contact._id}/add-new-event`}>Add Event</a>
       </div> */}
       
-      <a href="/my-contact-list">Back to All Contacts</a>
+      <a href="/my-contact-list">Back to All Contacts</a><br/>
+      <a href="/">Back to Events Home Page</a>
     </div>
   );
 }

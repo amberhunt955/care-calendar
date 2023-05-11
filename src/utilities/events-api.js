@@ -10,6 +10,8 @@ export function getAllEvents() {
   return sendRequest(BASE_URL);
 }
 
-export function deleteEvent(contactId, eventId) {
-  return sendRequest(`${BASE_URL}/${contactId}/event/${eventId}`, "DELETE");
+export function populateContact(eventId) {
+  console.log("HELLO FROM UTILITIES");
+  console.log(eventId);
+  return sendRequest(`${BASE_URL}/${eventId}`, "PUT")
 }

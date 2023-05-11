@@ -5,7 +5,12 @@ const eventSchema = new Schema({
     name: {type: String},
     month: {type: String},
     day: {type: Number},
-    contact: {type: String}
+    person: {type: String},
+    contact:
+    {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'Contact'
+    },
 }, {
     timestamps: true
 });

@@ -1,5 +1,4 @@
 const Contact = require("../../models/contact");
-const Event = require("../../models/event");
 const jwt = require("jsonwebtoken");
 
 //? HELPER FUNCTION
@@ -20,7 +19,7 @@ async function createContact(req, res) {
   }
 }
 
-//* GET ALL CONTACTS FOR LOGGED IN USER
+//* RETRIEVE ALL CONTACTS
 async function getAllContacts(req, res) {
   try {
     const contacts = await Contact.find({ contact: req.user._id });
@@ -70,16 +69,7 @@ async function deleteContact(req, res) {
   }
 }
 
-//* ADD EVENT TO CONTACT
-async function addEventToContact(req, res) {
-  try {
-    const contact = await Contact.findById(req.params.contactId);
-    const event = await Event.findById(req.params.eventId);
-    contact.events.push(event)
-  } catch (e) {
-    res.status(400).json({ msg: e.message });
-  }
-}
+//TODO! GET ALL EVENTS FOR CONTACT
 
 module.exports = {
   createContact,
@@ -87,5 +77,4 @@ module.exports = {
   findContact,
   updateContact,
   deleteContact,
-  addEventToContact,
 };

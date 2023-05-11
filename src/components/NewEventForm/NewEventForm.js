@@ -11,7 +11,7 @@ function NewEventForm() {
     name: "",
     month: "",
     day: "",
-    contact: ""
+    contact: contactId
   });
 
   // Create a handleSubmit to attach to the form onSubmit event
@@ -26,7 +26,7 @@ function NewEventForm() {
         name: formData.name,
         month: formData.month,
         day: formData.day,
-        contact: formData.contact
+        contact: contactId
       };
 
       const event = await createEvent(eventData);
@@ -53,16 +53,6 @@ function NewEventForm() {
       autoComplete="off"
       onSubmit={handleSubmit}
     >
-      <label>
-        Contact Name:{" "}
-        <input
-          type="text"
-          name="contact"
-          value={formData.contact}
-          onChange={handleChange}
-          required
-        />
-      </label>
 
       <label>
         Event Name:{" "}

@@ -11,4 +11,7 @@ router.post('/', eventsCtrl.createEvent);
 // find all events
 router.get('/', eventsCtrl.getAllEvents);
 
+// populate contact
+router.put('/:eventId', eventsCtrl.populateContact)
+
 module.exports = router;

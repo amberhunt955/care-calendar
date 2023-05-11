@@ -22,7 +22,3 @@ export function updateContact(id, editedObject) {
 export function deleteContact(id) {
   return sendRequest(`${BASE_URL}/my-contact-list/${id}`, "DELETE");
 }
-
-export function addEventToContact(contactId, eventId) {
-  return sendRequest(`${BASE_URL}/${contactId}/add-new-event/${eventId}`, "POST");
-}
